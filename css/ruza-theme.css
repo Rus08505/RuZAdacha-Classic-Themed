@@ -1,0 +1,26 @@
+
+/* Theme variants: override base variables via <html class="theme-*> */
+html.theme-neon{
+  --bg:#121417; --card:#181B20; --text:#E6E8EB; --muted:#9AA4AF;
+  --accent:#53FFB1; --accent2:#32DFA1; --border:#22262C; --danger:#FF6161;
+}
+html.theme-gradient{
+  --bg:linear-gradient(180deg,#f5f7ff 0%, #eef4ff 40%, #f9fbff 100%);
+  --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#6366f1; --accent2:#60a5fa; --border:#d6e0ff; --danger:#ef4444;
+}
+html.theme-black{
+  --bg:#000000; --card:#0b0b0b; --text:#f1f5f9; --muted:#94a3b8; --accent:#ffffff; --accent2:#9ca3af; --border:#1f2a3a; --danger:#ef4444;
+}
+
+/* Apply background/text to body if base CSS uses them */
+body{ background: var(--bg); color: var(--text); }
+
+/* Hamburger */
+.hamburger{width:36px;height:32px;border:none;background:transparent;cursor:pointer;display:grid;align-items:center;margin-right:8px}
+.hamburger span{display:block;height:3px;background:var(--text);border-radius:2px}
+.hamburger span:nth-child(1){width:22px}.hamburger span:nth-child(2){width:18px}.hamburger span:nth-child(3){width:24px}
+
+/* Basic card (in case settings uses .card from base) */
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin:10px 0}
+.card-title{font-weight:800;margin-bottom:8px}
+.row{display:flex;gap:10px;align-items:center}
